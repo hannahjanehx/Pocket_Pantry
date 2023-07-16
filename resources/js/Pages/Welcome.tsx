@@ -15,7 +15,7 @@ const StyledP = styled.p`
 const StyledHeader = styled.h2`
     margin: auto;
     margin-right: 1rem;
-`
+`;
 
 export default function Welcome({ auth, laravelVersion, phpVersion }: PageProps<{ laravelVersion: string, phpVersion: string }>) {
     return (
