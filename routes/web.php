@@ -37,6 +37,10 @@ Route::get('/register', function () {
     return Inertia::render('Register');
 })->middleware(['auth', 'verified'])->name('register');
 
+Route::get('/storage-areas-dashboard', function () {
+    return Inertia::render('Storage_Areas/StorageAreaDashboard');
+})->middleware(['auth', 'verified'])->name('storage-areas-dashboard');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
